@@ -1,0 +1,47 @@
+[
+  {
+    "id": "DTO-842901",
+    "fullName": "Venkata Sai Ram",
+    "qualification": "B.Com / BBA",
+    "passoutYear": "2023",
+    "phoneNumber": "7842839491",
+    "emailAddress": "sairam.v@gmail.com",
+    "careerTrack": "US Healthcare & Medical Billing",
+    "resumeFilename": null,
+    "resumeOriginalName": null,
+    "status": "Enrolled & Active",
+    "assignedBatch": "Morning Batch: 10:00 AM (Kukatpally Lab)",
+    "notes": "Career gap cleared with RCM project documentation. Doing well in AR denial calls.",
+    "createdAt": "2026-11-16T09:44:29.197Z"
+  },
+  {
+    "id": "DTO-842902",
+    "fullName": "Ananya Reddy",
+    "qualification": "B.Tech / B.E",
+    "passoutYear": "2024",
+    "phoneNumber": "9876543210",
+    "emailAddress": "ananya.reddy@gmail.com",
+    "careerTrack": "Salesforce (Admin & Dev/LWC)",
+    "resumeFilename": null,
+    "resumeOriginalName": null,
+    "status": "Interview Scheduled",
+    "assignedBatch": "Weekend Batch (Cloud Lab)",
+    "notes": "Completed Apex Trigger Frameworks & LWC Capstone. Referred to Persistent Tech.",
+    "createdAt": "2026-11-18T09:44:29.198Z"
+  },
+  {
+    "id": "DTO-842903",
+    "fullName": "Mohammed Imran",
+    "qualification": "B.Sc / BCA",
+    "passoutYear": "2022",
+    "phoneNumber": "9123456780",
+    "emailAddress": "imran.m@outlook.com",
+    "careerTrack": "Full-Stack (React/Node/SQL)",
+    "resumeFilename": null,
+    "resumeOriginalName": null,
+    "status": "New Lead",
+    "assignedBatch": "Counseling Scheduled",
+    "notes": "Transitioning from non-coding background. Wants 1-on-1 counseling.",
+    "createdAt": "2026-11-21T09:44:29.198Z"
+  }
+]
