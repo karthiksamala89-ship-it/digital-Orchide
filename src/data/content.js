@@ -9,99 +9,126 @@ export const INSTITUTE_INFO = {
   address: "Kukatpally, Hyderabad, Telangana, India",
   fullAddress: "Flat No. 302, Digital Tech Orchid Tower, Main Road, Kukatpally, Hyderabad, Telangana",
   officeHours: "Mon - Sat: 9:00 AM - 7:00 PM IST",
-  logoUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBvwH_vdjQzpn1m4o7IR2jxCkyIq4wocyh51asY2gYkZO-FHew9tzj7zK7MJihBcELz2kVyY4cmdHImw-PzyKiED_5tjcGLu9bK34_7vIGZ3VzJaEaqhbCzbb7SWJubSDWdvR5GOZamb2EyiYVbKDaO_Ymv56H-YInmXoONZhRaS4x6Pq5j-9k3TG5p4RYlCkd5yaYzVimfJlTQV6Wgk9OG1tHrzuTi-_x8maKD5Cdm"
+  logoUrl: "/logo.svg"
 };
 
 export const STATS = [
   { label: "Placed Students", value: "1,800+", icon: "trending_up", highlight: false },
   { label: "Placement Rate", value: "94%", highlight: true },
-  { label: "Hiring Partners", value: "45+", highlight: false },
+  { label: "Salary Package", value: "5-20 LPA", highlight: true },
   { label: "Alumni Rating", value: "4.9/5", icon: "star", highlight: false, fillIcon: true }
 ];
 
 export const PARTNERS = [
+  "TCS",
+  "Infosys",
+  "Accenture",
+  "Cognizant",
   "Optum Global",
-  "Cognizant Health",
-  "Salesforce Ecosystem",
-  "Access Healthcare",
-  "Omega Healthcare",
+  "Deloitte",
+  "IBM India",
+  "Capgemini",
   "Persistent Tech",
-  "Wipro Health",
-  "Deloitte Digital"
+  "Wipro"
 ];
 
 export const HERO_MODULES = [
   {
+    title: "SAP End User & SAP SD (Zero Coding)",
+    desc: "1 to 10 yrs exp, ₹5-20 LPA in PAN India MNCs with documentation",
+    icon: "database",
+    badge: "Hot Track",
+    bg: "bg-tertiary-fixed text-on-tertiary-fixed"
+  },
+  {
     title: "US Healthcare & Medical Billing",
-    desc: "RCM workflows, HIPAA, claims & billing portals",
+    desc: "RCM workflows, HIPAA, claims & live billing portals",
     icon: "medical_services",
     bg: "bg-primary-container text-on-primary"
   },
   {
     title: "Salesforce Admin & Dev",
-    desc: "LWC, Apex triggers, Flows & integrations",
+    desc: "LWC, Apex triggers, Flows & cloud integrations",
     icon: "cloud_done",
     bg: "bg-surface-tint text-on-primary"
   },
   {
-    title: "Full-Stack Web Development",
-    desc: "React, Node.js, Express & PostgreSQL",
-    icon: "code_blocks",
-    bg: "bg-secondary text-on-secondary"
-  },
-  {
-    title: "Career Gap & Documentation",
-    desc: "Experience guidance & BGC clearance support",
+    title: "Career Gap & 1-10 Yrs Experience Support",
+    desc: "Complete documentation & enterprise BGC clearance",
     icon: "badge",
-    bg: "bg-tertiary-fixed text-on-tertiary-fixed",
+    bg: "bg-secondary text-on-secondary",
     fillIcon: true
   },
   {
-    title: "1-on-1 Mock Interviews",
-    desc: "ATS resume revamp & direct interview referrals",
+    title: "1-on-1 Mock Interviews & Referrals",
+    desc: "Direct interview referrals in PAN India MNCs",
     icon: "video_chat",
     bg: "bg-primary text-on-primary"
   }
 ];
 
 export const TECH_SUBTRACKS = {
+  sap: {
+    id: "sap",
+    badge: "Zero Coding • ₹5 - 20 LPA",
+    badgeColor: "bg-tertiary-fixed text-on-tertiary-fixed",
+    title: "SAP SD (Sales & Distribution) & SAP End User Track",
+    description: "High-paying enterprise ERP track requiring ZERO CODING. Specifically designed for graduates and career-gap candidates seeking 1 to 10 years experience positioning in PAN India MNCs with complete documentation support.",
+    highlights: {
+      experience: "1 to 10 Years Experience",
+      salary: "₹5 LPA to ₹20 LPA",
+      codingRequired: "Zero Coding Required",
+      placement: "PAN India MNCs",
+      documentation: "Provided for BGC Clearance"
+    },
+    points: [
+      "Zero Coding Required: Pure business processes, transaction codes & functional navigation",
+      "SAP SD (Sales & Distribution): Sales orders, pricing procedures, delivery, billing & partner functions",
+      "SAP End User Mastery: Daily sales posting, customer invoices, ledger reconciliation & credit management",
+      "Complete Documentation Support: Experience certificates & documentation provided for seamless BGC clearance",
+      "PAN India MNC Placements: Target ₹5 LPA to ₹20 LPA packages in top IT & enterprise corporations"
+    ]
+  },
   salesforce: {
     id: "salesforce",
-    badge: "High Compensation",
-    badgeColor: "bg-tertiary-fixed text-on-tertiary-fixed",
-    title: "Salesforce Master Developer Track",
-    description: "Master in-demand cloud CRM technologies with real-time enterprise implementations, hands-on Trailhead modules, and certification readiness.",
-    points: [
-      "Admin & Platform Security Management",
-      "Apex Classes, Batch Apex & Trigger Frameworks",
-      "Lightning Web Components (LWC) & Event Propagation",
-      "SOQL, SOSL & REST API Integrations"
-    ]
-  },
-  frontend: {
-    id: "frontend",
-    badge: "Web & Mobile Responsive",
+    badge: "High Growth Cloud",
     badgeColor: "bg-primary-fixed text-on-primary-fixed",
-    title: "Modern Frontend Engineering (React)",
-    description: "Build robust, scalable single-page applications with contemporary JavaScript, modern component patterns, hooks, and clean UI architecture.",
+    title: "Salesforce Cloud Master Developer Track",
+    description: "Master enterprise cloud CRM architecture with real-time implementations, hands-on Trailhead modules, and certification readiness.",
+    highlights: {
+      experience: "1 to 6 Years Experience",
+      salary: "₹6 LPA to ₹16 LPA",
+      codingRequired: "Apex & LWC (Guided)",
+      placement: "Global Delivery Centers",
+      documentation: "Provided for BGC Clearance"
+    },
     points: [
-      "JavaScript ES6+, TypeScript & DOM Architecture",
-      "React Component Patterns, Hooks & Custom Hooks",
-      "State Flow with Redux Toolkit / Context API",
-      "Responsive Tailwind CSS & Production UI/UX"
+      "Admin & Platform Security: Org-wide defaults, profiles, permission sets & sharing",
+      "Apex Programming: Classes, batch apex & trigger handler frameworks",
+      "Lightning Web Components (LWC): Modern JavaScript ES6 & wire service integrations",
+      "SOQL, SOSL & REST APIs: Enterprise system integrations & capstone projects",
+      "Documentation & placement assistance for top Salesforce partner firms"
     ]
   },
-  backend: {
-    id: "backend",
-    badge: "High Scalability",
+  healthcare: {
+    id: "healthcare",
+    badge: "Immediate Hiring",
     badgeColor: "bg-secondary-fixed text-on-secondary-fixed",
-    title: "Backend & Relational Databases",
-    description: "Design and implement production-ready microservices, secure RESTful APIs, relational database schemas, and seamless cloud deployments.",
+    title: "US Healthcare Revenue Cycle Management (RCM)",
+    description: "Fast-track career transition for non-IT graduates into US healthcare MNCs with high job security, steady shifts, and rapid promotions.",
+    highlights: {
+      experience: "0 to 5 Years Experience",
+      salary: "₹3.5 LPA to ₹8.5 LPA",
+      codingRequired: "Zero Coding Required",
+      placement: "Hyderabad & PAN India",
+      documentation: "Provided for BGC Clearance"
+    },
     points: [
-      "Node.js Runtime, Express & RESTful APIs",
-      "PostgreSQL, SQL Queries, Joins & Indexing",
-      "JWT Token Authentication & RBAC Security",
-      "Git Team Collaboration, Docker & Cloud Deployment"
+      "US Healthcare Ecosystem: Payer, Provider & Clearinghouse EDI transactions",
+      "Patient Eligibility & Benefits Verification: Copay, coinsurance & deductible calculations",
+      "Medical Coding Fundamentals: ICD-10-CM diagnosis, CPT procedures & superbills",
+      "AR Denial Management: Claims scrubber errors, appeals drafting & live calling simulations",
+      "100% placement guidance with hiring partners like Optum, Cognizant, Omega"
     ]
   }
 };
@@ -109,9 +136,9 @@ export const TECH_SUBTRACKS = {
 export const CAREER_STEPS = [
   {
     step: "01",
-    title: "ATS Resume Revamp",
-    desc: "Custom keyword optimization designed to sail through enterprise corporate recruiter filters with ease.",
-    tag: "Score 90+ ATS",
+    title: "ATS Resume & Profile Revamp",
+    desc: "Custom keyword optimization designed to sail through enterprise MNC recruiter filters for SAP, Salesforce, and Healthcare.",
+    tag: "Score 95+ ATS",
     icon: "description",
     tagIcon: "check_circle",
     bg: "bg-primary-container text-on-primary"
@@ -119,7 +146,7 @@ export const CAREER_STEPS = [
   {
     step: "02",
     title: "Technical Mock Drills",
-    desc: "Rigorous 1-on-1 interview simulations with actively working senior tech leads and healthcare managers.",
+    desc: "Rigorous 1-on-1 interview simulations with actively working senior SAP consultants and technical leads.",
     tag: "Recorded Feedback",
     icon: "interpreter_mode",
     tagIcon: "videocam",
@@ -127,18 +154,18 @@ export const CAREER_STEPS = [
   },
   {
     step: "03",
-    title: "Live Capstone Hub",
-    desc: "Build real production GitHub repositories, portfolio projects, and working healthcare billing portal simulations.",
-    tag: "Live Portfolios",
+    title: "Live Project & Sandbox Hub",
+    desc: "Hands-on practice on live SAP GUI / S/4HANA sandboxes and healthcare billing software simulators.",
+    tag: "Live Portals",
     icon: "terminal",
     tagIcon: "folder_special",
     bg: "bg-secondary text-on-secondary"
   },
   {
     step: "04",
-    title: "Documentation Support",
-    desc: "Complete step-by-step guidance on background checks (BGC), career-gap validation, and offer letter negotiation.",
-    tag: "Smooth Onboarding",
+    title: "1-10 Yrs Documentation Support",
+    desc: "Complete documentation support for 1 to 10 years experience cases to clear company background verification (BGC) smoothly.",
+    tag: "BGC Clearance",
     icon: "verified_user",
     tagIcon: "security",
     bg: "bg-tertiary-fixed text-on-tertiary-fixed"
@@ -147,34 +174,34 @@ export const CAREER_STEPS = [
 
 export const FAQS = [
   {
-    id: "faq-1",
-    question: "Can non-IT or non-medical graduates join?",
-    answer: "Yes, absolutely! Both our US Healthcare and IT/Salesforce tracks begin from foundational zero level. They are specifically structured for graduates from B.Com, B.Sc, BBA, BA, and non-circuit engineering branches to build job-ready skills."
+    id: "faq-sap",
+    question: "Do I need coding knowledge for SAP SD or SAP End User?",
+    answer: "Zero coding required! SAP SD and SAP End User roles are 100% functional and business process-oriented. You work on standard SAP screens, transactions, and workflows. Any graduate (B.Com, B.Sc, BBA, B.Tech, Arts, MBA) can learn and get placed with ₹5 to ₹20 LPA packages in PAN India MNCs."
   },
   {
-    id: "faq-2",
-    question: "How do you handle candidates with a 2 to 5 year career gap?",
-    answer: "We specialize in career gap transitions. Over 62% of our placed candidates have 2+ years of gap. We provide full documentation consultation, live capstone verification, project deliverables, and real project experience to help you clear background verification (BGC) smoothly."
+    id: "faq-doc",
+    question: "How does the 1 to 10 years experience & documentation support work?",
+    answer: "We provide comprehensive guidance and documentation support for candidates with career gaps or those looking to position 1 to 10 years of experience. We provide project deliverables, business scenario blueprints, client references, and interview preparation to help you clear MNC background checks (BGC) without issues."
   },
   {
-    id: "faq-3",
-    question: "What are the batch timings and format?",
-    answer: "We offer flexible morning, evening, and weekend-only batches in both classroom (Kukatpally, Hyderabad) and live interactive online modes. All sessions are recorded with 24/7 access to practice portals and lab support."
+    id: "faq-salary",
+    question: "What is the expected salary package for SAP and other tracks?",
+    answer: "For SAP (SD / End User / Functional), packages range from ₹5 LPA up to ₹20 LPA depending on your experience profile (1 to 10 years). For US Healthcare, packages start between ₹3.5 LPA to ₹8 LPA, and Salesforce tracks offer ₹6 LPA to ₹16 LPA in top PAN India MNCs."
   },
   {
-    id: "faq-4",
-    question: "What salary package can I expect after completion?",
-    answer: "US Healthcare freshers typically start between ₹3.2 LPA to ₹5.5 LPA in top MNCs like Optum and Cognizant. Salesforce and Full-Stack IT graduates typically receive offers ranging from ₹4.5 LPA to ₹9.5 LPA based on interview performance and capstone portfolio."
+    id: "faq-location",
+    question: "Where is the institute located in Kukatpally, Hyderabad?",
+    answer: "Our campus is centrally located in Kukatpally, Hyderabad (close to Kukatpally metro and bus stops). We offer both classroom batches at Kukatpally and live interactive online cohorts. Direct WhatsApp support is available at 7842839491."
   },
   {
-    id: "faq-5",
-    question: "Where is the institute located in Kukatpally / Hyderabad?",
-    answer: "Our institute is centrally located in Kukatpally, Hyderabad, easily accessible by metro, bus, and local transit. Call or WhatsApp us at 7842839491 for location coordinates and directions."
+    id: "faq-contact",
+    question: "How do I enroll or get free career counseling?",
+    answer: "Simply submit the enquiry form on this page or WhatsApp us at 7842839491. Your details will be sent directly to our admissions desk, and our senior mentor will review your profile and explain batch timings and fee structures."
   }
 ];
 
 export const HEALTHCARE_SYLLABUS = [
-  { week: "Weeks 1-2", topic: "US Healthcare Ecosystem & Fundamentals", details: "Overview of US Healthcare, Payer vs Provider vs Clearinghouse dynamics, HIPAA compliance, EDI transactions (837, 835, 270/271, 276/277)." },
+  { week: "Weeks 1-2", topic: "US Healthcare Ecosystem & EDI Transactions", details: "Overview of US Healthcare, Payer vs Provider vs Clearinghouse dynamics, HIPAA privacy compliance, EDI transactions (837, 835, 270/271, 276/277)." },
   { week: "Weeks 3-4", topic: "Patient Registration & Eligibility Verification", details: "Demographic entry, Insurance eligibility verification, Prior authorization workflows, Co-pays, Co-insurance, and Deductibles calculation." },
   { week: "Weeks 5-6", topic: "Medical Coding Principles & Charge Entry", details: "ICD-10-CM diagnosis codes, CPT procedure codes, HCPCS, Superbills review, CMS-1500 (HCFA) and UB-04 institutional claim forms." },
   { week: "Weeks 7-8", topic: "Electronic Claim Submission & Payment Posting", details: "Clearinghouse scrubber rules, front-end vs back-end rejections, ERA/EOB posting, manual adjustments, payment reconciliation." },
@@ -183,28 +210,28 @@ export const HEALTHCARE_SYLLABUS = [
 
 export const TECH_SYLLABUS = [
   {
-    track: "Track A: Salesforce Cloud Master Developer",
+    track: "Track 1: SAP SD & SAP End User (Zero Coding • ₹5 - 20 LPA)",
     modules: [
-      "Salesforce Architecture, Standard/Custom Objects, Schema Builder",
-      "Security Model: Org-wide Defaults, Profiles, Permission Sets, Sharing Rules",
-      "Process Automation: Record-Triggered Flows, Screen Flows, Flow Orchestration",
-      "Apex Programming: OOP Concepts, Triggers, Trigger Handler Frameworks, Test Classes (85%+ coverage)",
-      "SOQL & SOSL Queries, DML Operations & Governor Limits handling",
-      "Lightning Web Components (LWC): JavaScript ES6, Decorators, Wire Service, LMS & PubSub",
-      "REST & SOAP Web Services Integration, Postman, Capstone enterprise project"
+      "SAP ERP Overview: System Navigation, S/4HANA vs ECC architecture, GUI Customization",
+      "SAP SD Enterprise Structure: Sales Organization, Distribution Channel, Division, Sales Area",
+      "Master Data Management: Customer Master Data, Material Master, Customer-Material Info Records",
+      "Sales Order Processing: Quotations, Inquiries, Standard Sales Orders, Special Orders",
+      "Pricing Determination: Condition Technique, Pricing Procedures, Access Sequences, Condition Records",
+      "Shipping & Delivery: Outbound Delivery, Picking, Packing, Goods Issue (PGI) workflows",
+      "Billing & Invoicing: Invoices, Credit & Debit Memos, Revenue Account Determination",
+      "SAP End User Operations: Day-to-day transactions, Purchase Orders, Vendor Invoices & Reconciliation",
+      "Documentation & BGC Preparation: Real-time MNC project experience, blueprint docs, mock client calls"
     ]
   },
   {
-    track: "Track B: Full-Stack Web Engineering (React & Node)",
+    track: "Track 2: Salesforce Cloud Architecture (Admin & Dev)",
     modules: [
-      "Modern JavaScript ES6+, Asynchronous JS, Promises, Fetch API",
-      "React 18 Architecture: Components, JSX, Hooks (useState, useEffect, useMemo, custom hooks)",
-      "State Management: Redux Toolkit, Context API, React Query",
-      "Responsive Styling: Tailwind CSS, CSS Grid/Flexbox, UI component systems",
-      "Backend Runtime: Node.js, Express.js server, Routing, Middlewares, Validation",
-      "Databases: PostgreSQL / MongoDB, Relational schemas, Indexes, Aggregations",
-      "Authentication & Security: JWT tokens, OAuth, bcrypt, CORS, Environment configs",
-      "Full Stack Capstone Deployment: Git, CI/CD Actions, Render/Vercel hosting"
+      "Salesforce Architecture: Standard & Custom Objects, Schema Builder, Relationships",
+      "Security Model: Org-wide Defaults, Profiles, Permission Sets, Role Hierarchy, Sharing Rules",
+      "Process Automation: Record-Triggered Flows, Screen Flows, Flow Orchestration",
+      "Apex Programming: OOP Concepts, Triggers, Trigger Handler Frameworks, Test Classes",
+      "Lightning Web Components (LWC): JavaScript ES6, Decorators, Wire Service, LMS & PubSub",
+      "Integrations: REST & SOAP Web Services, Postman, Capstone enterprise project deployment"
     ]
   }
 ];

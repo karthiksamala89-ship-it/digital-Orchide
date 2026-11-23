@@ -17,7 +17,6 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submissionId, setSubmissionId] = useState('');
-  const [serverMessage, setServerMessage] = useState('');
   const [isDragging, setIsDragging] = useState(false);
 
   const fileInputRef = useRef(null);
@@ -55,59 +54,39 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Generate a local reference ID
+    const generatedId = 'DTO-' + Math.floor(100000 + Math.random() * 900000);
+    setSubmissionId(generatedId);
+
+    // Build WhatsApp message with form details
+    const msg =
+      `*New Student Enquiry - Digital Tech Orchid*\n\n` +
+      `🆔 Ref ID: ${generatedId}\n` +
+      `👤 Name: ${formData.fullName}\n` +
+      `📱 Phone: ${formData.phoneNumber}\n` +
+      `📧 Email: ${formData.emailAddress}\n` +
+      `🎓 Qualification: ${formData.qualification} (${formData.passoutYear})\n` +
+      `📚 Career Track: ${formData.careerTrack}\n` +
+      `📍 Location: Kukatpally, Hyderabad` +
+      (selectedFile ? `\n📎 Resume: ${selectedFile.name} (candidate will share separately)` : '');
+
+    const whatsappUrl = `https://wa.me/917842839491?text=${encodeURIComponent(msg)}`;
+
+    // Open WhatsApp with prefilled message
+    window.open(whatsappUrl, '_blank');
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+
+    // Trigger celebratory confetti
     try {
-      // Create FormData to support file upload to Express Backend
-      const payload = new FormData();
-      payload.append('fullName', formData.fullName);
-      payload.append('qualification', formData.qualification);
-      payload.append('passoutYear', formData.passoutYear);
-      payload.append('phoneNumber', formData.phoneNumber);
-      payload.append('emailAddress', formData.emailAddress);
-      payload.append('careerTrack', formData.careerTrack);
-      payload.append('notes', formData.notes || `Preferred Location: Kukatpally, Hyderabad`);
-      
-      if (selectedFile) {
-        payload.append('resume', selectedFile);
-      }
-
-      // Real fetch to Node.js backend
-      const response = await fetch('/api/enquiries', {
-        method: 'POST',
-        body: payload
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        setSubmissionId(result.data.id);
-        setServerMessage('Application stored in server database successfully.');
-      } else {
-        // Fallback demo ID if server is starting
-        const generatedId = 'DTO-' + Math.floor(100000 + Math.random() * 900000);
-        setSubmissionId(generatedId);
-      }
+      confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
     } catch (err) {
-      console.warn('Backend offline or connecting directly, fallback to local ID:', err);
-      const generatedId = 'DTO-' + Math.floor(100000 + Math.random() * 900000);
-      setSubmissionId(generatedId);
-    } finally {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+      // ignore
+    }
 
-      // Trigger celebratory confetti
-      try {
-        confetti({
-          particleCount: 80,
-          spread: 70,
-          origin: { y: 0.6 }
-        });
-      } catch (err) {
-        // ignore
-      }
-
-      if (onSubmissionSuccess) {
-        onSubmissionSuccess();
-      }
+    if (onSubmissionSuccess) {
+      onSubmissionSuccess();
     }
   };
 
@@ -224,8 +203,7 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
                 <div className="w-full p-4 rounded-xl bg-surface-container-low text-left text-xs text-on-surface flex flex-col gap-1.5 my-2 border border-outline-variant/30">
                   <div><strong>Selected Track:</strong> {formData.careerTrack}</div>
                   <div><strong>Degree:</strong> {formData.qualification} ({formData.passoutYear})</div>
-                  {selectedFile && <div><strong>Attached Resume:</strong> {selectedFile.name} (Uploaded to Backend Server)</div>}
-                  {serverMessage && <div className="text-primary font-medium mt-1">✓ {serverMessage}</div>}
+                  {selectedFile && <div><strong>Resume:</strong> {selectedFile.name} (share on WhatsApp chat)</div>}
                 </div>
 
                 <div className="flex flex-wrap gap-3 mt-2">
@@ -364,7 +342,9 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
                     {[
                       'US Healthcare & Medical Billing',
                       'Salesforce (Admin & Dev/LWC)',
+                      'SAP End User & SAP SD',
                       'Full-Stack (React/Node/SQL)',
+                      'IT Engineering Cloud',
                       'Career Counseling / Not Decided'
                     ].map((track) => (
                       <label
@@ -431,7 +411,7 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
                             Selected: {selectedFile.name}
                           </span>
                           <span className="text-xs text-secondary">
-                            ({(selectedFile.size / (1024 * 1024)).toFixed(2)} MB) - Ready to upload to server
+                            ({(selectedFile.size / (1024 * 1024)).toFixed(2)} MB) - Will be mentioned in WhatsApp message
                           </span>
                         </div>
                       ) : (
@@ -440,7 +420,7 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
                             Click to browse or drag &amp; drop resume file here
                           </span>
                           <p className="text-[11px] text-on-surface-variant mt-0.5">
-                            Saved directly to institute candidate portal database
+                            Shared via WhatsApp — resume name included in message
                           </p>
                         </>
                       )}
@@ -457,12 +437,12 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
                   {isSubmitting ? (
                     <div className="flex items-center gap-2">
                       <div className="w-5 h-5 border-2 border-on-tertiary-fixed border-t-transparent rounded-full animate-spin" />
-                      <span>Submitting to Database...</span>
+                      <span>Opening WhatsApp...</span>
                     </div>
                   ) : (
                     <>
                       <span className="material-symbols-outlined text-[20px]">send</span>
-                      <span>Submit Enquiry &amp; Resume</span>
+                      <span>Submit Enquiry on WhatsApp</span>
                     </>
                   )}
                 </button>
