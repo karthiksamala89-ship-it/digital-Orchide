@@ -80,7 +80,7 @@ export const Programs = ({ onOpenHealthcareModal, onOpenTechModal, onEnquireClic
 
               {/* Interactive Sub-Tracks Tab Switcher */}
               <div className="flex flex-col gap-3 pt-1">
-                <div className="flex items-center gap-1.5 p-1 bg-surface-container-low rounded-xl border border-outline-variant/30">
+                <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-1.5 p-1 bg-surface-container-low rounded-xl border border-outline-variant/30">
                   <button
                     onClick={() => setActiveTab('sap')}
                     className={`flex-1 py-2 px-3 rounded-lg text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-1.5 ${
@@ -111,6 +111,16 @@ export const Programs = ({ onOpenHealthcareModal, onOpenTechModal, onEnquireClic
                     }`}
                   >
                     Healthcare RCM
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('fullstack')}
+                    className={`flex-1 py-2 px-3 rounded-lg text-xs md:text-sm font-bold transition-all ${
+                      activeTab === 'fullstack'
+                        ? 'bg-surface-container-lowest text-primary shadow-sm ring-1 ring-primary/20'
+                        : 'text-on-surface-variant hover:text-on-surface'
+                    }`}
+                  >
+                    Full Stack
                   </button>
                 </div>
 
@@ -185,13 +195,13 @@ export const Programs = ({ onOpenHealthcareModal, onOpenTechModal, onEnquireClic
             {/* Bottom Actions */}
             <div className="pt-8 flex items-center gap-3 mt-6 border-t border-surface-container-high/60">
               <button
-                onClick={() => onEnquireClick(activeTab === 'sap' ? 'SAP SD & SAP End User (Zero Coding • ₹5-20 LPA)' : activeTab === 'salesforce' ? 'Salesforce (Admin & Dev/LWC)' : 'US Healthcare & Medical Billing')}
+                onClick={() => onEnquireClick(currentSubtrack.enquiryTrack)}
                 className="flex-1 text-center py-3 px-4 rounded-xl bg-primary text-on-primary text-sm font-bold hover:bg-primary-container transition-colors shadow-sm"
               >
-                Apply for {activeTab === 'sap' ? 'SAP SD & End User' : activeTab === 'salesforce' ? 'Salesforce' : 'Healthcare'}
+                Apply for {activeTab === 'sap' ? 'SAP SD & End User' : activeTab === 'salesforce' ? 'Salesforce' : activeTab === 'healthcare' ? 'Healthcare' : 'Full Stack'}
               </button>
               <button
-                onClick={onOpenTechModal}
+                onClick={() => onOpenTechModal(currentSubtrack.enquiryTrack)}
                 className="py-3 px-4 rounded-xl bg-surface-container-high text-on-surface text-sm font-semibold hover:bg-surface-variant transition-colors flex items-center gap-1.5"
               >
                 <span className="material-symbols-outlined text-[18px]">menu_book</span>

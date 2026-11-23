@@ -15,6 +15,7 @@ import { FloatingContact } from './components/FloatingContact';
 export default function App() {
   const [healthcareModalOpen, setHealthcareModalOpen] = useState(false);
   const [techModalOpen, setTechModalOpen] = useState(false);
+  const [techModalTrack, setTechModalTrack] = useState('Salesforce (Admin & Dev/LWC)');
   const [portalModalOpen, setPortalModalOpen] = useState(false);
   const [adminModalOpen, setAdminModalOpen] = useState(false);
   const [selectedTrack, setSelectedTrack] = useState('US Healthcare & Medical Billing');
@@ -51,7 +52,10 @@ export default function App() {
         {/* Core Career Tracks / Programs */}
         <Programs 
           onOpenHealthcareModal={() => setHealthcareModalOpen(true)}
-          onOpenTechModal={() => setTechModalOpen(true)}
+          onOpenTechModal={(track) => {
+            setTechModalTrack(track);
+            setTechModalOpen(true);
+          }}
           onEnquireClick={scrollToEnquiry}
         />
 
@@ -90,6 +94,7 @@ export default function App() {
         isOpen={techModalOpen} 
         onClose={() => setTechModalOpen(false)} 
         onEnrollClick={scrollToEnquiry}
+        techTrack={techModalTrack}
       />
 
       {/* Student Candidate Portal Modal */}

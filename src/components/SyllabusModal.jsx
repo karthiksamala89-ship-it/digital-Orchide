@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import { HEALTHCARE_SYLLABUS, TECH_SYLLABUS, INSTITUTE_INFO } from '../data/content';
 
-export const SyllabusModal = ({ type, isOpen, onClose, onEnrollClick }) => {
+export const SyllabusModal = ({
+  type,
+  isOpen,
+  onClose,
+  onEnrollClick,
+  techTrack = 'Salesforce (Admin & Dev/LWC)'
+}) => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isOpen) {
@@ -27,7 +33,7 @@ export const SyllabusModal = ({ type, isOpen, onClose, onEnrollClick }) => {
               {type === 'healthcare' ? 'medical_services' : 'cloud_done'}
             </span>
             <h4 className="text-xl md:text-2xl font-bold text-on-surface">
-              {type === 'healthcare' ? 'US Healthcare & Billing Curriculum' : 'IT & Salesforce Syllabus Outline'}
+              {type === 'healthcare' ? 'US Healthcare & Billing Curriculum' : 'IT & Full-Stack Syllabus Outline'}
             </h4>
           </div>
           <button
@@ -100,7 +106,7 @@ export const SyllabusModal = ({ type, isOpen, onClose, onEnrollClick }) => {
             <button
               onClick={() => {
                 onClose();
-                onEnrollClick(type === 'healthcare' ? 'US Healthcare & Medical Billing' : 'Salesforce (Admin & Dev/LWC)');
+                onEnrollClick(type === 'healthcare' ? 'US Healthcare & Medical Billing' : techTrack);
               }}
               className="flex-1 sm:flex-initial px-6 py-2.5 rounded-full bg-primary text-on-primary text-xs font-bold hover:bg-primary-container shadow transition-all"
             >

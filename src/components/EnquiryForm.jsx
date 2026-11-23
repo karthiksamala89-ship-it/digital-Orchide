@@ -343,7 +343,7 @@ export const EnquiryForm = ({ preselectedTrack, onSubmissionSuccess }) => {
                       'US Healthcare & Medical Billing',
                       'Salesforce (Admin & Dev/LWC)',
                       'SAP End User & SAP SD',
-                      'Full-Stack (React/Node/SQL)',
+                      'Full-Stack Web Development (Java/React/SQL)',
                       'IT Engineering Cloud',
                       'Career Counseling / Not Decided'
                     ].map((track) => (

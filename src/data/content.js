@@ -53,6 +53,12 @@ export const HERO_MODULES = [
     bg: "bg-surface-tint text-on-primary"
   },
   {
+    title: "Full-Stack Web Development",
+    desc: "HTML, CSS, JavaScript, React, Java & SQL",
+    icon: "code",
+    bg: "bg-secondary-container text-on-secondary-container"
+  },
+  {
     title: "Career Gap & 1-10 Yrs Experience Support",
     desc: "Complete documentation & enterprise BGC clearance",
     icon: "badge",
@@ -70,6 +76,7 @@ export const HERO_MODULES = [
 export const TECH_SUBTRACKS = {
   sap: {
     id: "sap",
+    enquiryTrack: "SAP End User & SAP SD",
     badge: "Zero Coding • ₹5 - 20 LPA",
     badgeColor: "bg-tertiary-fixed text-on-tertiary-fixed",
     title: "SAP SD (Sales & Distribution) & SAP End User Track",
@@ -91,6 +98,7 @@ export const TECH_SUBTRACKS = {
   },
   salesforce: {
     id: "salesforce",
+    enquiryTrack: "Salesforce (Admin & Dev/LWC)",
     badge: "High Growth Cloud",
     badgeColor: "bg-primary-fixed text-on-primary-fixed",
     title: "Salesforce Cloud Master Developer Track",
@@ -112,6 +120,7 @@ export const TECH_SUBTRACKS = {
   },
   healthcare: {
     id: "healthcare",
+    enquiryTrack: "US Healthcare & Medical Billing",
     badge: "Immediate Hiring",
     badgeColor: "bg-secondary-fixed text-on-secondary-fixed",
     title: "US Healthcare Revenue Cycle Management (RCM)",
@@ -129,6 +138,29 @@ export const TECH_SUBTRACKS = {
       "Medical Coding Fundamentals: ICD-10-CM diagnosis, CPT procedures & superbills",
       "AR Denial Management: Claims scrubber errors, appeals drafting & live calling simulations",
       "100% placement guidance with hiring partners like Optum, Cognizant, Omega"
+    ]
+  },
+  fullstack: {
+    id: "fullstack",
+    enquiryTrack: "Full-Stack Web Development (Java/React/SQL)",
+    badge: "Frontend + Backend",
+    badgeColor: "bg-secondary-fixed text-on-secondary-fixed",
+    title: "Full-Stack Web Development (Java)",
+    description: "Build responsive web applications from the ground up, covering frontend fundamentals, modern React development, Java backend programming, and SQL databases.",
+    highlights: {
+      experience: "Beginner Friendly",
+      salary: "Project-Based Learning",
+      codingRequired: "Hands-On Coding",
+      placement: "Frontend & Java Roles",
+      documentation: "Projects & Interview Prep"
+    },
+    points: [
+      "HTML & CSS: Semantic page structure, responsive layouts, and accessible styling",
+      "Bootstrap & Tailwind CSS: Build and style responsive interfaces with popular CSS frameworks",
+      "JavaScript: ES6+ fundamentals, DOM, asynchronous programming, and API integration",
+      "React: Components, props, state, hooks, and building interactive single-page applications",
+      "Java & SQL: Core Java, object-oriented programming, relational databases, queries, and JDBC",
+      "Capstone Project: Connect a React frontend to a Java backend and SQL database"
     ]
   }
 };
@@ -232,6 +264,20 @@ export const TECH_SYLLABUS = [
       "Apex Programming: OOP Concepts, Triggers, Trigger Handler Frameworks, Test Classes",
       "Lightning Web Components (LWC): JavaScript ES6, Decorators, Wire Service, LMS & PubSub",
       "Integrations: REST & SOAP Web Services, Postman, Capstone enterprise project deployment"
+    ]
+  },
+  {
+    track: "Track 3: Full-Stack Web Development (Java)",
+    modules: [
+      "HTML: Semantic elements, accessible forms, tables, and page structure",
+      "CSS: Selectors, box model, Flexbox, Grid, responsive design, and media queries",
+      "Bootstrap & Tailwind CSS: Responsive layouts, utility classes, and reusable UI patterns",
+      "JavaScript: ES6+, DOM events, modules, promises, async/await, and REST API requests",
+      "React: JSX, components, props, state, hooks, forms, and single-page application patterns",
+      "Core Java: Data types, control flow, methods, classes, object-oriented programming, collections, and exceptions",
+      "SQL & Relational Databases: Schema design, CRUD queries, joins, constraints, and aggregation",
+      "Java Backend: Build REST APIs with Spring Boot and connect to a SQL database using JDBC/JPA",
+      "Capstone Project: Develop and present a full-stack application with a React UI and Java API"
     ]
   }
 ];
